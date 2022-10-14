@@ -4,10 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { Header } from "../components"
 import sanityClient, { urlFor } from "../sanity"
-import { Post } from "../types"
+import { PostType } from "../types"
 
 interface Props {
-  posts: [Post]
+  posts: [PostType]
 }
 
 const Home: NextPage<Props> = ({ posts }: Props) => {
