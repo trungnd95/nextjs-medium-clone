@@ -1,4 +1,5 @@
 export interface PostType {
+    createdAt: string | number | Date
     _id: string,
     title: string, 
     author: {
@@ -6,6 +7,7 @@ export interface PostType {
         image: string
     }, 
     description: string, 
+    comments: [Comment],
     mainImage: {
         asset: {
             url: string,
@@ -15,4 +17,20 @@ export interface PostType {
         current: string
     }, 
     body: [object]
+}
+
+export interface Comment {
+    approved: boolean, 
+    comment: string, 
+    name: string, 
+    email: string, 
+    post: {
+        _ref: string, 
+        _type: string
+    }, 
+    _createdAt: string, 
+    _id: string,
+    _rev: string, 
+    _type: string, 
+    _updatedAt: string
 }

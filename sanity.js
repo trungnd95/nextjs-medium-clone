@@ -6,7 +6,8 @@ export const config = {
     dataset: process.env.SANITY_DATASET || "production", 
     projectId: "xidv70eb",//process.env.SANITY_PROJECT_ID, 
     apiVersion: "2021-10-21", 
-    useCdn: process.env.NODE_ENV === "production"
+    useCdn: process.env.NODE_ENV === "production", 
+    token: process.env.API_TOKEN
 }
 
 export default sanityClient(config);
