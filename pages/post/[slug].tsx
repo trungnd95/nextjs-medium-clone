@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import PortableText from "react-portable-text";
-import { Header } from "../../components";
 import sanityClient, { urlFor } from "../../sanity";
 import { PostType } from "../../types";
 
@@ -35,9 +34,8 @@ function Post({ post }: { post: PostType }) {
     })
   }
   return (
-    <main>
-      <Header />
-      <div className="w-full h-40 relative">
+    <>
+      <div className="w-full h-40 md:h-80 relative">
         <Image
           src={urlFor(post.mainImage).url()!}
           alt=""
@@ -145,7 +143,7 @@ function Post({ post }: { post: PostType }) {
           </div>
         ))}
       </div>
-    </main>
+    </>
   )
 }
 

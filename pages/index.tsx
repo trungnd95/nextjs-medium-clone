@@ -1,8 +1,6 @@
 import type { NextPage } from "next"
-import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import { Header } from "../components"
 import sanityClient, { urlFor } from "../sanity"
 import { PostType } from "../types"
 
@@ -13,14 +11,6 @@ interface Props {
 const Home: NextPage<Props> = ({ posts }: Props) => {
   return (
     <div className="max-w-7xl mx-auto">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      {/* Header Nav */}
-      <Header />
-
       {/* Hero */}
       <div className="flex items-center justify-between bg-yellow-400 py-10 xl:py-0 px-10">
         <div className="flex-[1.5]">
